@@ -29,4 +29,11 @@ defmodule DiscussWeb.TopicController do
             render conn, "new.html", changeset: changeset, errors: changeset
         end
     end
+
+    def edit(conn, %{"id" => topics_id}) do
+        topic = Repo.get(Topic, topics_id)
+        changeset = Topic.changeset(topic)
+
+        render conn, "edit.html", changeset: changeset, topic: topic
+    end
 end
