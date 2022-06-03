@@ -1,7 +1,7 @@
 <%= form_for @changeset, Routes.topic_path(@conn, :create), fn f -> %>
     <div class="form-group">
         <%= text_input f, :title, placeholder: "Title", class: "form-control" %>
-        <%= error_tag f, :tittle %>
+        <%= error_tag f, :tittle %> <!-- нихуя не выводит пустую ошибку -->
     </div>
 
     <%= submit "Save Topic", class: "btn btn-primary" %>

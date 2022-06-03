@@ -118,3 +118,17 @@
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/*  Css main */
+
+.help-block {
+  color: red;
+  text-transform: capitalize;
+  position: absolute;
+  top: 35px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
