@@ -1,8 +1,12 @@
 defmodule DiscussWeb.TopicController do
     use DiscussWeb, :controller
 
-    alias DiscussWeb.Topic
+    alias Discuss.Topic
     alias Discuss.Repo
+
+    def index(conn, _params) do
+        
+    end
 
     def new(conn, _params) do
         changeset = Topic.changeset(%Topic{}, %{})
@@ -16,8 +20,8 @@ defmodule DiscussWeb.TopicController do
 
         case Repo.insert(changeset) do
             {:ok, post} -> IO.inspect(post)
-            {:error, changeset} ->
-            render conn, "new.html", changeset: changeset # нихуя не выводит пустую ошибку
+            {:error, changeset} -> IO.inspect(changeset)
+            render conn, "new.html", changeset: changeset, errors: changeset
         end
     end
 end

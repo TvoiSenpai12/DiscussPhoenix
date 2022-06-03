@@ -1,4 +1,4 @@
-defmodule DiscussWeb.Topic do
+defmodule Discuss.Topic do
     use DiscussWeb, :model
 
     schema "topics" do
