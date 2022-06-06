@@ -3,7 +3,7 @@ defmodule DiscussWeb.AuthController do
 
     plug Ueberauth
 
-    def callback(conn, params) do
+    def callback(%{assigns: %{ueberauth_auth: auth}} = conn , params) do
          
     end
 end
