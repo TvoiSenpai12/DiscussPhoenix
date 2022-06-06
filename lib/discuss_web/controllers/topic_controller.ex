@@ -50,4 +50,8 @@ defmodule DiscussWeb.TopicController do
                 render conn, "edit.html", changeset: changeset, topic: old_topic
         end
     end
+
+    def delete(conn, %{"id" => topic_id}) do
+        
+    end
 end
