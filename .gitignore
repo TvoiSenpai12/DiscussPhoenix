@@ -32,3 +32,6 @@ discuss-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Data from GitHub Developer settings
+/assets/vendor/gitauth/id.txt
+/assets/vendor/gitauth/secret.txt
