@@ -16,7 +16,7 @@ defmodule DiscussWeb.Plugs.SetUser do
             user = user_id && Repo.get(User, user_id) ->
                 assign(conn, :user, user)
             true ->
-                assign(conn, :user, nill)
+                assign(conn, :user, nil)
         end
     end
 end
