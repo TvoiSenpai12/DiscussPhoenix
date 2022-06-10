@@ -12,6 +12,6 @@ defmodule DiscussWeb.CommentsChannel do
         IO.puts(name)
         IO.inspect(message)
         
-        {:reply. :ok, socket}
+        {:reply, :ok, socket}
     end
 end
